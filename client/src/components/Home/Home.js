@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 // Redux
 import { useDispatch } from "react-redux";
+import { getPostsBySearch } from "../../actions/posts";
 // Enables chip pill format
 import ChipInput from "material-ui-chip-input";
 // Routes
@@ -44,9 +45,9 @@ function Home() {
 
 	// Handle search bar enter key
 	const handleKeyPress = (e) => {
-		// Handle enter key
 		if (e.key === 13) {
-			// search for post
+			// Submit search query on enter key
+			searchPost();
 		}
 	};
 
@@ -59,6 +60,18 @@ function Home() {
 	useEffect(() => {
 		dispatch(getPosts());
 	}, [currentId, dispatch]);
+
+	const searchPost = () => {
+		if (search.trim() || tags) {
+			// Dispatch => fetch search posts
+			// Note: Can't send an array in urlParams. Therefore, we must send tags as a string
+			dispatch(getPostsBySearch({ search, tags: tags.join(",") }));
+		} else {
+			// Redirect back if no valid results
+			history.push("/");
+		}
+	};
+
 	return (
 		<Grow in>
 			<Container maxWidth="xl">
@@ -98,6 +111,14 @@ function Home() {
 								label="Search tags"
 								variant="outlined"
 							/>
+							<Button
+								onClick={searchPost}
+								className={classes.searchButton}
+								color="primary"
+								variant="contained"
+							>
+								Search
+							</Button>
 						</AppBar>
 						<Form currentId={currentId} setCurrentId={setCurrentId} />
 						<Paper elevation={6}>

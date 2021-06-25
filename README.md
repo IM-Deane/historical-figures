@@ -1,6 +1,6 @@
 # Project: Memories Social Media App
 
-_Current Version:_ 1.0.1
+_Current Version:_ 1.0.2
 
 # Description: This app utilizes the MERN stack to create a small-scale social media application.
 
@@ -18,6 +18,16 @@ pagination. I will alos likely update the general theme of the site to make it
 more interesting.
 
 # Version History:
+
+_Version 1.0.2:_
+
+Implemented search request functionality. This feature allows the user to search
+for a post by either it's title or by its tags.
+
+Currently, the results are simply printed to the browser console. However, I
+felt this was a good milestone as I had to create a new route
+(getPostsBySearch()) and implement the necessary backend logic (find the posts
+by their title or a tag present in their tags array.)
 
 _Version 1.0.1:_
 
