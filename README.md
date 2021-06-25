@@ -1,6 +1,6 @@
 # Project: Memories Social Media App
 
-_Current Version:_ 1.0.2
+_Current Version:_ 1.0.3
 
 # Description: This app utilizes the MERN stack to create a small-scale social media application.
 
@@ -18,6 +18,12 @@ pagination. I will alos likely update the general theme of the site to make it
 more interesting.
 
 # Version History:
+
+_Version 1.0.3:_
+
+Finished implementing the search posts feature. It will now update the browser
+url to the specified query, dispatch the query to the database, and render the
+results.
 
 _Version 1.0.2:_
 

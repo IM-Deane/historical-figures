@@ -66,6 +66,10 @@ function Home() {
 			// Dispatch => fetch search posts
 			// Note: Can't send an array in urlParams. Therefore, we must send tags as a string
 			dispatch(getPostsBySearch({ search, tags: tags.join(",") }));
+			// Navigate to the specified post
+			history.push(
+				`/posts/search?searchQuery=${search || "none"}&${tags.join(",")}`
+			);
 		} else {
 			// Redirect back if no valid results
 			history.push("/");
