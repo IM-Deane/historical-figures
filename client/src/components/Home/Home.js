@@ -3,7 +3,7 @@ import { useHistory, useLocation } from "react-router-dom";
 // Redux
 import { useDispatch } from "react-redux";
 // Enables chip pill format
-import { ChipInput } from "@material-ui/core/Chip/Chip";
+import ChipInput from "material-ui-chip-input";
 // Routes
 import Posts from "../Posts/Posts";
 import Form from "../Form/Form";
