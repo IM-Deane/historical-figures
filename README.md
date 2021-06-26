@@ -1,6 +1,6 @@
 # Project: Memories Social Media App
 
-_Current Version:_ 1.0.6
+_Current Version:_ 1.0.7
 
 # Description: This app utilizes the MERN stack to create a small-scale social media application.
 
@@ -18,6 +18,18 @@ pagination. I will alos likely update the general theme of the site to make it
 more interesting.
 
 # Version History:
+
+_Version 1.0.7:_
+
+Implemented the project details page. When the user clicks on a project card,
+they create a post request that fetches the specified post's data. Once the data
+has been retrieved, the user is pushed to an individual project page which
+renders the projects details in a card.
+
+Note: I fought for an hour with a bug that stemmed from the "moment.js" library.
+The function "moment([dateValue]).fromNow()" was not working properly. So
+instead of calculating the amount of time that's passed since the post was
+created, I've opted to simply display its creation date.
 
 _Version 1.0.6:_
 

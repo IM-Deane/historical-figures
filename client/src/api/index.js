@@ -18,6 +18,8 @@ API.interceptors.request.use((req) => {
 	return req;
 });
 
+export const fetchPost = (id) => API.get(`/posts/${id}`);
+
 // Get the specified posts
 export const fetchPosts = (page) => API.get(`/posts?page=${page}`);
 

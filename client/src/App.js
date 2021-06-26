@@ -21,7 +21,7 @@ const App = () => {
 					<Route exact path="/" component={() => <Redirect to="/posts" />} />
 					<Route exact path="/posts" component={Home} />
 					<Route exact path="/posts/search" component={Home} />
-					<Route path="/posts/:id" component={PostDetails} />
+					<Route exact path="/posts/:id" component={PostDetails} />
 					{/* Check if user logged in. If they're, redirect to /posts */}
 					<Route
 						path="/auth"
