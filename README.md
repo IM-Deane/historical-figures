@@ -1,6 +1,6 @@
 # Project: Memories Social Media App
 
-_Current Version:_ 1.0.5
+_Current Version:_ 1.0.6
 
 # Description: This app utilizes the MERN stack to create a small-scale social media application.
 
@@ -19,12 +19,20 @@ more interesting.
 
 # Version History:
 
+_Version 1.0.6:_
+
+Added a loading state using Redux's built-in _isLoading_. I've called this
+feature when the user performs longer async actions (initial page load,
+searching for posts, clickling on pagination, etc. ).
+
+Users prefer visual feedback and so this will hopefully improve the overall UX.
+
 _Version 1.0.5:_
 
-Implemented pagination feature. The app will now only display a limited amount
-of posts when making a fetch request. I set the limit to 8 posts per page.
-Unfortunately, the app only has 5 posts for now. So i'll have to do more indepth
-testing later.
+Implemented pagination feature. The app will now only get and display a limited
+amount of posts when making a fetch request. I set the limit to 8 posts per
+page. Unfortunately, the app only has 5 posts for now. So i'll have to do more
+indepth testing later.
 
 _Version 1.0.4:_
 
