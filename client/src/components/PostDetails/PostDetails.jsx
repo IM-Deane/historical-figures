@@ -90,7 +90,8 @@ const PostDetails = () => {
 				</div>
 			</div>
 			{/* RECOMMENDED POSTS */}
-			{recommendedPosts?.length && (
+			{/* Note: !! converts post length to a boolean value. */}
+			{!!recommendedPosts.length && (
 				<div className={classes.section}>
 					<Typography gutterBottom variant="h5">
 						You might also enjoy these posts:
@@ -101,7 +102,7 @@ const PostDetails = () => {
 						{recommendedPosts.map(
 							({ title, message, name, likes, selectedFile, _id }) => (
 								<div
-									style={{ margin: "20px", cursor: "pointer" }}
+									style={{ margin: "20px", cursor: "pointer", width: "200px" }}
 									onClick={() => openPost(_id)}
 									key={_id}
 								>
@@ -117,7 +118,7 @@ const PostDetails = () => {
 									<Typography gutterBottom variant="subtitle1">
 										Likes: {likes.length}
 									</Typography>
-									<img src={selectedFile} width="200px" />
+									<img src={selectedFile} width="200px" alt={title} />
 								</div>
 							)
 						)}

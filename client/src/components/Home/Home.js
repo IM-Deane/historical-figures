@@ -8,7 +8,6 @@ import ChipInput from "material-ui-chip-input";
 // Routes
 import Posts from "../Posts/Posts";
 import Form from "../Form/Form";
-import { getPosts } from "../../actions/posts";
 import Pagination from "../Pagination";
 
 // Styles
@@ -26,7 +25,7 @@ import useStyles from "./styles";
 
 // Setup URL search params to enable search functions
 function useQuery() {
-	return new URLSearchParams(useLocation.search);
+	return new URLSearchParams(useLocation().search);
 }
 
 function Home() {
@@ -43,6 +42,21 @@ function Home() {
 	const [search, setSearch] = useState("");
 	const [tags, setTags] = useState([]);
 
+	const searchPost = () => {
+		if (search.trim() || tags) {
+			// Dispatch => fetch search posts
+			// Note: Can't send an array in urlParams. Therefore, we must send tags as a string
+			dispatch(getPostsBySearch({ search, tags: tags.join(",") }));
+			// Navigate to the specified post
+			history.push(
+				`/posts/search?searchQuery=${search || "none"}&tags=${tags.join(",")}`
+			);
+		} else {
+			// Redirect back if no valid results
+			history.push("/");
+		}
+	};
+
 	// Handle search bar enter key
 	const handleKeyPress = (e) => {
 		if (e.key === 13) {
@@ -56,21 +70,6 @@ function Home() {
 
 	const handleDelete = (tagToDelete) =>
 		setTags(tags.filter((tag) => tag !== tagToDelete));
-
-	const searchPost = () => {
-		if (search.trim() || tags) {
-			// Dispatch => fetch search posts
-			// Note: Can't send an array in urlParams. Therefore, we must send tags as a string
-			dispatch(getPostsBySearch({ search, tags: tags.join(",") }));
-			// Navigate to the specified post
-			history.push(
-				`/posts/search?searchQuery=${search || "none"}&${tags.join(",")}`
-			);
-		} else {
-			// Redirect back if no valid results
-			history.push("/");
-		}
-	};
 
 	return (
 		<Grow in>
@@ -106,8 +105,8 @@ function Home() {
 							<ChipInput
 								style={{ margin: "10px 0" }}
 								value={tags}
-								onAdd={handleAdd}
-								onDelete={handleDelete}
+								onAdd={(tag) => handleAdd(tag)}
+								onDelete={(tag) => handleDelete(tag)}
 								label="Search tags"
 								variant="outlined"
 							/>
