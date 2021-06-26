@@ -8,7 +8,9 @@ import decode from "jwt-decode";
 // Styles
 import useStyles from "./styles";
 
-import memories from "../../images/memories.png";
+// Company Logo
+import memoriesLogo from "../../images/memories-logo.png";
+import memoriesText from "../../images/memories-text.png";
 
 function Navbar() {
 	// State
@@ -46,18 +48,21 @@ function Navbar() {
 
 	return (
 		<AppBar className={classes.appBar} position="static" color="inherit">
-			<div className={classes.brandContainer}>
-				<Typography
-					component={Link}
-					to="/"
-					className={classes.heading}
-					variant="h2"
-					align="center"
-				>
-					Memories
-				</Typography>
-				<img className={classes.image} src={memories} alt="icon" height="60" />
-			</div>
+			{/* Company logo */}
+			<Link to="/" className={classes.brandContainer}>
+				<img
+					className={classes.image}
+					src={memoriesText}
+					alt="icon"
+					height="45px"
+				/>
+				<img
+					className={classes.image}
+					src={memoriesLogo}
+					alt="icon"
+					height="40px"
+				/>
+			</Link>
 			<Toolbar className={classes.toolbar}>
 				{user ? (
 					<div className={classes.profile}>

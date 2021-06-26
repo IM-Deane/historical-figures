@@ -1,6 +1,6 @@
 # Project: Memories Social Media App
 
-_Current Version:_ 1.0.3
+_Current Version:_ 1.0.4
 
 # Description: This app utilizes the MERN stack to create a small-scale social media application.
 
@@ -18,6 +18,17 @@ pagination. I will alos likely update the general theme of the site to make it
 more interesting.
 
 # Version History:
+
+_Version 1.0.4:_
+
+Updated the site's styling to a more professional looking theme. It no longer
+looks like a fourth grader made it.
+
+To accomplish this, I updated the Nav logo and changed the site's background
+color to an offwhite.
+
+Finally, I updated the layout of the cards so that a max of 4 cards are added to
+each row on larger screens.
 
 _Version 1.0.3:_
 
