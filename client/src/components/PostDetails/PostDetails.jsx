@@ -10,7 +10,7 @@ import {
 
 import { useDispatch, useSelector } from "react-redux";
 
-import { getPost } from "../../actions/posts";
+import { getPost, getPostsBySearch } from "../../actions/posts";
 
 import useStyles from "./styles";
 
@@ -26,7 +26,20 @@ const PostDetails = () => {
 		dispatch(getPost(id));
 	}, [id]);
 
+	// Get recommended posts by their tags
+	useEffect(() => {
+		if (post) {
+			dispatch(
+				getPostsBySearch({ search: "none", tags: post?.tags.join(",") })
+			);
+		}
+	}, [post]);
+
+	// Handle no posts available
 	if (!post) return null;
+
+	// Navigate to the new post
+	const openPost = (_id) => history.push(`/posts/${_id}`);
 
 	// Set temporary loading state
 	if (isLoading) {
@@ -36,6 +49,9 @@ const PostDetails = () => {
 			</Paper>
 		);
 	}
+
+	// Keep all posts besides the currently displayed post
+	const recommendedPosts = posts?.filter(({ _id }) => _id !== post._id);
 
 	return (
 		<Paper style={{ padding: "20px", borderRadius: "15px" }} elevation={6}>
@@ -74,6 +90,40 @@ const PostDetails = () => {
 				</div>
 			</div>
 			{/* RECOMMENDED POSTS */}
+			{recommendedPosts?.length && (
+				<div className={classes.section}>
+					<Typography gutterBottom variant="h5">
+						You might also enjoy these posts:
+					</Typography>
+					<Divider />
+					{/* Related post cards */}
+					<div className={classes.recommendedPosts}>
+						{recommendedPosts.map(
+							({ title, message, name, likes, selectedFile, _id }) => (
+								<div
+									style={{ margin: "20px", cursor: "pointer" }}
+									onClick={() => openPost(_id)}
+									key={_id}
+								>
+									<Typography gutterBottom variant="h6">
+										{title}
+									</Typography>
+									<Typography gutterBottom variant="subtitle2">
+										{name}
+									</Typography>
+									<Typography gutterBottom variant="subtitle2">
+										{message}
+									</Typography>
+									<Typography gutterBottom variant="subtitle1">
+										Likes: {likes.length}
+									</Typography>
+									<img src={selectedFile} width="200px" />
+								</div>
+							)
+						)}
+					</div>
+				</div>
+			)}
 		</Paper>
 	);
 };

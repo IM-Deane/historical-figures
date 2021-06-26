@@ -54,9 +54,7 @@ const Post = ({ post, setCurrentId }) => {
 		);
 	};
 
-	const openPost = (e) => {
-		// dispatch(getPost(post._id, history));
-
+	const openPost = () => {
 		history.push(`/posts/${post._id}`);
 	};
 

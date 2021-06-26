@@ -1,6 +1,6 @@
 # Project: Memories Social Media App
 
-_Current Version:_ 1.0.7
+_Current Version:_ 1.0.8
 
 # Description: This app utilizes the MERN stack to create a small-scale social media application.
 
@@ -14,10 +14,20 @@ edit/delete the post.
 # Future Plans:
 
 For the next version of the app, I will be adding client side routing and
-pagination. I will alos likely update the general theme of the site to make it
+pagination. I will also likely update the general theme of the site to make it
 more interesting.
 
 # Version History:
+
+_Version 1.0.8:_
+
+Added a recommended posts feature to the post details page. This feature finds
+other posts that're relevant to the selected post and displays them to the user.
+
+The search function is not working due to a logic error. However, it's 1:30am
+and i'm not going to solve it tonight in this state.
+
+I will address this bug in the next update.
 
 _Version 1.0.7:_
 
