@@ -1,6 +1,6 @@
 # Project: Memories Social Media App
 
-_Current Version:_ 1.0.4
+_Current Version:_ 1.0.5
 
 # Description: This app utilizes the MERN stack to create a small-scale social media application.
 
@@ -18,6 +18,13 @@ pagination. I will alos likely update the general theme of the site to make it
 more interesting.
 
 # Version History:
+
+_Version 1.0.5:_
+
+Implemented pagination feature. The app will now only display a limited amount
+of posts when making a fetch request. I set the limit to 8 posts per page.
+Unfortunately, the app only has 5 posts for now. So i'll have to do more indepth
+testing later.
 
 _Version 1.0.4:_
 

@@ -3,11 +3,29 @@ import mongoose from "mongoose";
 import PostMessage from "../models/postMessage.js";
 
 export const getPosts = async (req, res) => {
-	try {
-		// Get all messages from DB
-		const postMessages = await PostMessage.find();
+	const { page } = req.query;
 
-		res.status(200).json(postMessages);
+	try {
+		const LIMIT = 8;
+		// Get start index of every page
+		const startIndex = (Number(page) - 1) * LIMIT;
+		// Get the total number of pages so we know where the last page is
+		const total = await PostMessage.countDocuments({});
+
+		// Get the specified # of posts (according to limit),
+		// sorted by newest first (ie. last entry = newest).
+		// For each set of pages, make sure you skip the previous ones, hence the starting index.
+		// You don't want to keep getting the same posts before rendering the new ones
+		const posts = await PostMessage.find()
+			.sort({ _id: -1 })
+			.limit(LIMIT)
+			.skip(startIndex);
+
+		res.status(200).json({
+			data: posts,
+			currentPage: Number(page),
+			numberOfPages: Math.ceil(total / LIMIT),
+		});
 	} catch (error) {
 		res.status(404).json({ message: error.message });
 	}

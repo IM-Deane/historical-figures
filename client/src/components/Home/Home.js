@@ -57,10 +57,6 @@ function Home() {
 	const handleDelete = (tagToDelete) =>
 		setTags(tags.filter((tag) => tag !== tagToDelete));
 
-	useEffect(() => {
-		dispatch(getPosts());
-	}, [currentId, dispatch]);
-
 	const searchPost = () => {
 		if (search.trim() || tags) {
 			// Dispatch => fetch search posts
@@ -127,7 +123,7 @@ function Home() {
 						<Form currentId={currentId} setCurrentId={setCurrentId} />
 						<Paper elevation={6}>
 							{/* Pagination tabs */}
-							<Pagination />
+							<Pagination page={page} />
 						</Paper>
 					</Grid>
 				</Grid>
