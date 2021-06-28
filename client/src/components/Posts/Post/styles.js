@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles({
+export default makeStyles((theme) => ({
 	media: {
 		height: 0,
 		paddingTop: "56.25%",
@@ -43,6 +43,7 @@ export default makeStyles({
 	},
 	title: {
 		padding: "0 16px",
+		color: theme.palette.text.default,
 	},
 	cardActions: {
 		padding: "0 16px 8px 16px",
@@ -53,4 +54,4 @@ export default makeStyles({
 		display: "block",
 		textAlign: "initial",
 	},
-});
+}));

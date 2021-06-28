@@ -4,7 +4,7 @@ TODO: Insert Project photo
 
 TODO: Insert link to [live demo]()
 
-_Current Version:_ 1.0.10
+_Current Version:_ 1.0.11
 
 ## Description: This app utilizes the MERN stack to create a small-scale social media application.
 
@@ -33,6 +33,7 @@ edit/delete the post.
 - Post creators have the ablitity to update and delete their **own posts**.
 - Post search functionality
 - Recommended posts functionality
+- Post pagination (limited to 8/page)
 
 ### Future Plans:
 
@@ -71,6 +72,12 @@ Again, if you just want to play with a working demo, you can follow this link:
 []().
 
 ## Version History:
+
+_Version 1.0.11:_
+
+Added a custom theme file and context provider. I The theme overrides the
+default color scheme of Material-ui. The site's theme is now aligned with the
+custom logo.
 
 _Version 1.0.10:_
 

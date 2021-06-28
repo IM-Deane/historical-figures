@@ -45,6 +45,8 @@ export default makeStyles((theme) => ({
 	},
 	logout: {
 		marginLeft: "20px",
+		backgroundColor: theme.palette.primary.main,
+		color: theme.palette.text.light,
 	},
 	userName: {
 		display: "flex",
@@ -57,6 +59,6 @@ export default makeStyles((theme) => ({
 	},
 	purple: {
 		color: theme.palette.getContrastText(deepPurple[500]),
-		backgroundColor: deepPurple[500],
+		backgroundColor: theme.palette.primary.main,
 	},
 }));
