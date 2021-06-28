@@ -6,7 +6,7 @@ TODO: Insert link to [live demo]()
 
 _Current Version:_ 1.0.11
 
-## Description: This app utilizes the MERN stack to create a small-scale social media application.
+## Description: This app utilizes the MERN stack to create a small-scale historical figures wiki site.
 
 Users can create an account or login using their google account. Once they've
 chosen an account option, the user can create a post that is saved in a MongoDB
