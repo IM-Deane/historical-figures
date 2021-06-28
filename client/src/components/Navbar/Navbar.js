@@ -9,7 +9,7 @@ import decode from "jwt-decode";
 import useStyles from "./styles";
 
 // Company Logo
-import memoriesLogo from "../../images/memories-logo.png";
+import memoriesLogo from "../../images/historical-figures-logo.png";
 import memoriesText from "../../images/memories-text.png";
 
 function Navbar() {
@@ -52,15 +52,9 @@ function Navbar() {
 			<Link to="/" className={classes.brandContainer}>
 				<img
 					className={classes.image}
-					src={memoriesText}
-					alt="icon"
-					height="45px"
-				/>
-				<img
-					className={classes.image}
 					src={memoriesLogo}
 					alt="icon"
-					height="40px"
+					height="95px"
 				/>
 			</Link>
 			<Toolbar className={classes.toolbar}>

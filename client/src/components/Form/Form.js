@@ -80,12 +80,12 @@ const Form = ({ currentId, setCurrentId }) => {
 				onSubmit={handleSubmit}
 			>
 				<Typography variant="h6">
-					{currentId ? `Editing "${post.title}"` : "Creating a Memory"}
+					{currentId ? `Editing "${post.title}"` : "Add a New Figure"}
 				</Typography>
 				<TextField
 					name="title"
 					variant="outlined"
-					label="Title"
+					label="Name"
 					fullWidth
 					value={postData.title}
 					onChange={(e) => setPostData({ ...postData, title: e.target.value })}
@@ -93,7 +93,7 @@ const Form = ({ currentId, setCurrentId }) => {
 				<TextField
 					name="message"
 					variant="outlined"
-					label="Message"
+					label="Enter a brief biography"
 					fullWidth
 					multiline
 					rows={4}

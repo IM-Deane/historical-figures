@@ -94,7 +94,7 @@ function Home() {
 							<TextField
 								name="search"
 								variant="outlined"
-								label="Search Memories"
+								label="Search figures"
 								fullWidth
 								value={search}
 								onKeyPress={handleKeyPress}

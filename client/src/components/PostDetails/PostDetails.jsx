@@ -33,6 +33,9 @@ const PostDetails = () => {
 				getPostsBySearch({ search: "none", tags: post?.tags.join(",") })
 			);
 		}
+
+		// Update page title
+		document.title = `${post?.title} | Historical Figures`;
 	}, [post]);
 
 	// Handle no posts available

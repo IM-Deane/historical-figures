@@ -1,8 +1,12 @@
-# Project: Memories Social Media App
+# Project: Historical Figures Website
 
-_Current Version:_ 1.0.9
+-- Insert Project photo
 
-# Description: This app utilizes the MERN stack to create a small-scale social media application.
+--- Insert link to [live demo]()
+
+_Current Version:_ 1.0.10
+
+## Description: This app utilizes the MERN stack to create a small-scale social media application.
 
 Users can create an account or login using their google account. Once they've
 chosen an account option, the user can create a post that is saved in a MongoDB
@@ -11,13 +15,51 @@ Atlas cluster.
 Only users who're signed in can like the posts and only the post's creator can
 edit/delete the post.
 
-# Future Plans:
+### Future Plans:
 
 For the next version of the app, I will be adding client side routing and
 pagination. I will also likely update the general theme of the site to make it
 more interesting.
 
-# Version History:
+### Getting Started:
+
+For those of you who would like to run the app on your computer, you will need
+to download the code and install the dependencies using your favorite package
+manager (ie. npm or yarn).
+
+Once you have the dependencies installed, you will need to open the app in your
+favorite code editor (I used VS Code), open a split terminal or two separate
+terminals.
+
+Once the terminals are open, please follow these steps:
+
+1. On the first terminal, please run the following command: cd server/ && npm
+   start
+
+- This will launch the server on https://localhost:5000
+
+2. Next, in the second terminal window, please run the following command: cd
+   client/ && npm started
+
+- This will launch the client side of the app on https://localhost:3000
+
+3. Finally, you can navigate to the client side address in your favorite
+   browser.
+
+Whew, that was a lot of steps hey?
+
+Again, if you just want to play with a working demo, you can follow this link:
+[]().
+
+## Version History:
+
+_Version 1.0.10:_
+
+Updated the site to the _Historical Figures_ concept. I believe converting the
+website from a generic social media app to this new niche will make it more
+interesting.
+
+In the next update I will modifiy the site's theme.
 
 _Version 1.0.9:_
 
