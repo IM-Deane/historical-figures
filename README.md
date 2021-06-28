@@ -1,8 +1,8 @@
 # Project: Historical Figures Website
 
--- Insert Project photo
+TODO: Insert Project photo
 
---- Insert link to [live demo]()
+TODO: Insert link to [live demo]()
 
 _Current Version:_ 1.0.10
 
@@ -15,11 +15,30 @@ Atlas cluster.
 Only users who're signed in can like the posts and only the post's creator can
 edit/delete the post.
 
+**Development Stack:** MERN
+
+- MongoDB
+- Express
+- React
+- Node
+
+### Features:
+
+- Social Auth using Google Account
+- Custom Auth using JWT
+- Submission form utilizes react-base-64 to enable image uploads
+- Posts have different access levels depending on the users status -- Signed out
+  users can only view the posts
+- Signed in users can like the posts and create new ones
+- Post creators have the ablitity to update and delete their **own posts**.
+- Post search functionality
+- Recommended posts functionality
+
 ### Future Plans:
 
-For the next version of the app, I will be adding client side routing and
+~~For the next version of the app, I will be adding client side routing and
 pagination. I will also likely update the general theme of the site to make it
-more interesting.
+more interesting.~~
 
 ### Getting Started:
 
