@@ -1,6 +1,6 @@
 # Project: Historical Figures Website
 
-TODO: Insert Project photo
+![Historical Figures](https://github.com/IM-Deane/images/blob/main/assets/images/historical-figures-main.png)
 
 TODO: Insert link to [live demo]()
 
