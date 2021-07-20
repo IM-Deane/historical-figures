@@ -21,7 +21,7 @@ app.use("/users", userRoutes);
 
 // Greeting route
 app.get("/", (req, res) => {
-	res.send("Hello from Historical figures server!");
+	res.send("Hello from historical figures server");
 });
 
 // DB connection
