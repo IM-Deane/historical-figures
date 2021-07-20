@@ -2,11 +2,14 @@
 
 ![Historical Figures](https://github.com/IM-Deane/images/blob/main/assets/images/historical-figures-main.png)
 
-TODO: Insert link to [live demo]()
+[Live Site](https://im-deane-historical-figures.netlify.app/)
 
-_Current Version:_ 1.0.11
+_Current Version:_ 1.1.0
 
-## Description: This app utilizes the MERN stack to create a small-scale historical figures wiki site.
+## Description:
+
+This app utilizes the MERN stack to create a small-scale historical figures wiki
+site.
 
 Users can create an account or login using their google account. Once they've
 chosen an account option, the user can create a post that is saved in a MongoDB
@@ -72,6 +75,10 @@ Again, if you just want to play with a working demo, you can follow this link:
 []().
 
 ## Version History:
+
+_Version 1.1.0:_
+
+Updated the content of the site.
 
 _Version 1.0.11:_
 

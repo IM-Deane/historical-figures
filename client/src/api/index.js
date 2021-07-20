@@ -2,9 +2,14 @@ import axios from "axios";
 
 // Create base url that allows the use of other endpoints
 // Used in production deployment
-// const API = axios.create{("https://memories-project-im-deane.herokuapp.com/"});
+const API = axios.create({
+	baseURL: "https://historical-figures-mern.herokuapp.com/",
+});
+
 // Dev/testing url
-const API = axios.create({ baseURL: "http://localhost:5000" });
+// const API = axios.create({
+// 	baseURL: "https://localhost:5000",
+// });
 
 // On each request, send the users token to verify their access
 API.interceptors.request.use((req) => {
